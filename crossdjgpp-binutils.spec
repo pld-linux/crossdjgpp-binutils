@@ -13,6 +13,7 @@ Source0:	ftp://ftp.kernel.org/pub/linux/devel/binutils/binutils-%{version}.tar.b
 # Source0-md5:	1c1af0064ebd3d7bd99905874656a21e
 BuildRequires:	flex
 BuildRequires:	bison
+BuildRequires:	gettext-devel
 BuildRequires:	/bin/bash
 Requires:	crossdjgpp-platform
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
