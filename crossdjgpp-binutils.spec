@@ -1,4 +1,5 @@
 Summary:	DJGPP GNU Binary Utility Development Utilities - binutils
+Summary(pl):	Narzêdzia programistyczne GNU DJGPP - binutils
 Name:		crossdjgpp-binutils
 Version:	2.11.90.0.19
 Release:	1
@@ -18,11 +19,17 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		arch		%{_prefix}/%{target}
 
 %description
-DJGPP is a port of GNU GCC to the DOS environment. (It stands for
-DJ's Gnu Programming Platform, if it has to stand for something, but
-it's best left ambiguous.)
+DJGPP is a port of GNU GCC to the DOS environment. (It stands for DJ's
+Gnu Programming Platform, if it has to stand for something, but it's
+best left ambiguous.)
 
 This package contains cross targeted binutils.
+
+%description -l pl
+DJGPP to port GNU GCC dla ¶rodowiska DOS (skrót oznacza DJ's Gnu
+Programming Platform, je¶li ju¿ koniecznie ma co¶ oznaczaæ).
+
+Ten pakiet zawiera binutils skompilowane do kroskompilacji.
 
 %prep
 %setup -q -n binutils-%{version}
