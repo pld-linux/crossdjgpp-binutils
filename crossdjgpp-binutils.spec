@@ -74,7 +74,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	prefix=$RPM_BUILD_ROOT%{_prefix} \
 	mandir=$RPM_BUILD_ROOT%{_mandir} \
-	infodir=$RPM_BUILD_ROOT%{_infodir}
+	infodir=$RPM_BUILD_ROOT%{_infodir} \
+	libdir=$RPM_BUILD_ROOT%{_libdir}
 
 # remove these man pages unless we cross-build for win*/netware platforms.
 # however, this should be done in Makefiles.
