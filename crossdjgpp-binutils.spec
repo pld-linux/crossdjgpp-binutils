@@ -5,9 +5,6 @@ Version:	2.11.90.0.19
 Release:	1
 License:	GPL
 Group:		Development/Tools
-Group(de):	Entwicklung/Werkzeuge
-Group(fr):	Development/Outils
-Group(pl):	Programowanie/Narzêdzia
 Source0:	ftp://ftp.kernel.org/pub/linux/devel/binutils/binutils-%{version}.tar.bz2
 BuildRequires:	flex
 BuildRequires:	bison
