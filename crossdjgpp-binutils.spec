@@ -27,7 +27,7 @@ This package contains cross targeted binutils.
 DJGPP to port GNU GCC dla ¶rodowiska DOS (skrót oznacza DJ's Gnu
 Programming Platform, je¶li ju¿ koniecznie ma co¶ oznaczaæ).
 
-Ten pakiet zawiera binutils skompilowane do kroskompilacji.
+Ten pakiet zawiera binutils skompilowane do kompilacji skro¶nej.
 
 %prep
 %setup -q -n binutils-%{version}
