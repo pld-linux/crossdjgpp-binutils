@@ -6,7 +6,7 @@ Summary(pt_BR):	Utilitários para desenvolvimento de binários da GNU - DJGPP binu
 Summary(tr):	GNU geliþtirme araçlarý - DJGPP binutils
 Name:		crossdjgpp-binutils
 Version:	2.11.90.0.19
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Tools
 Source0:	ftp://ftp.kernel.org/pub/linux/devel/binutils/binutils-%{version}.tar.bz2
