@@ -11,10 +11,15 @@ License:	GPL
 Group:		Development/Tools
 Source0:	ftp://ftp.kernel.org/pub/linux/devel/binutils/binutils-%{version}.tar.bz2
 # Source0-md5:	1c1af0064ebd3d7bd99905874656a21e
-BuildRequires:	flex
+URL:		http://sources.redhat.com/binutils/
+BuildRequires:	automake
+BuildRequires:	bash
 BuildRequires:	bison
+BuildRequires:	flex
 BuildRequires:	gettext-devel
-BuildRequires:	/bin/bash
+%ifarch sparc sparc32
+BuildRequires:	sparc32
+%endif
 Requires:	crossdjgpp-platform
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -38,7 +43,7 @@ Ten pakiet zawiera binutils generuj±ce skro¶nie binaria dla DOS.
 %setup -q -n binutils-%{version}
 
 %build
-rm -rf $RPM_BUILD_ROOT
+cp /usr/share/automake/config.sub .
 
 # Because of a bug in binutils-2.9.1, a cross libbfd.so* is not named
 # lib<target>bfd.so*. To prevent confusion with native binutils, we
@@ -46,8 +51,12 @@ rm -rf $RPM_BUILD_ROOT
 # [the same applies to binutils 2.10.1.0.4]
 
 # ldscripts won't be generated properly if SHELL is not bash...
-CFLAGS="%{rpmcflags}" LDFLAGS="%{rpmldflags}" \
+CFLAGS="%{rpmcflags}" \
+LDFLAGS="%{rpmldflags}" \
 CONFIG_SHELL="/bin/bash" \
+%ifarch sparc
+sparc32 \
+%endif
 ./configure \
 	--prefix=%{_prefix} \
 	--libdir=%{_libdir} \
@@ -55,7 +64,9 @@ CONFIG_SHELL="/bin/bash" \
 	--infodir=%{_infodir} \
 	--target=%{target}
 
-%{__make} tooldir=%{_prefix} EXEEXT="" all
+%{__make} all \
+	tooldir=%{_prefix} \
+	EXEEXT=""
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -63,8 +74,11 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	prefix=$RPM_BUILD_ROOT%{_prefix} \
 	mandir=$RPM_BUILD_ROOT%{_mandir} \
-	infodir=$RPM_BUILD_ROOT%{_infodir} \
-	libdir=$RPM_BUILD_ROOT%{_libdir}
+	infodir=$RPM_BUILD_ROOT%{_infodir}
+
+# remove these man pages unless we cross-build for win*/netware platforms.
+# however, this should be done in Makefiles.
+rm -f $RPM_BUILD_ROOT%{_mandir}/man1/{*dlltool,*nlmconv,*windres}.1
 
 %files
 %defattr(644,root,root,755)
