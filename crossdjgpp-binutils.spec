@@ -5,7 +5,7 @@ Summary(pl):	Skro¶ne narzêdzia programistyczne GNU dla DJGPP - binutils
 Summary(pt_BR):	Utilitários para desenvolvimento de binários da GNU - DJGPP binutils
 Summary(tr):	GNU geliþtirme araçlarý - DJGPP binutils
 Name:		crossdjgpp-binutils
-Version:	2.15.90.0.3
+Version:	2.15.91.0.1
 Release:	1
 License:	GPL
 Group:		Development/Tools
