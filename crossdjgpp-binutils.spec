@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		Development/Tools
 Source0:	ftp://ftp.kernel.org/pub/linux/devel/binutils/binutils-%{version}.tar.bz2
+# Source0-md5:	59cb6db4b7642562b5abb3298a25b063
 BuildRequires:	flex
 BuildRequires:	bison
 BuildRequires:	/bin/bash
