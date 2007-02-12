@@ -1,9 +1,9 @@
 Summary:	Cross DJGPP GNU binary utility development utilities - binutils
-Summary(es.UTF-8):   Utilitarios para desarrollo de binarios de la GNU - DJGPP binutils
-Summary(fr.UTF-8):   Utilitaires de développement binaire de GNU - DJGPP binutils
-Summary(pl.UTF-8):   Skrośne narzędzia programistyczne GNU dla DJGPP - binutils
-Summary(pt_BR.UTF-8):   Utilitários para desenvolvimento de binários da GNU - DJGPP binutils
-Summary(tr.UTF-8):   GNU geliştirme araçları - DJGPP binutils
+Summary(es.UTF-8):	Utilitarios para desarrollo de binarios de la GNU - DJGPP binutils
+Summary(fr.UTF-8):	Utilitaires de développement binaire de GNU - DJGPP binutils
+Summary(pl.UTF-8):	Skrośne narzędzia programistyczne GNU dla DJGPP - binutils
+Summary(pt_BR.UTF-8):	Utilitários para desenvolvimento de binários da GNU - DJGPP binutils
+Summary(tr.UTF-8):	GNU geliştirme araçları - DJGPP binutils
 Name:		crossdjgpp-binutils
 Version:	2.15.91.0.1
 Release:	1
